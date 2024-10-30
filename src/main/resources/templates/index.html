@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="bg" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноза за времето</title>
+</head>
+<body>
+<h1>Прогноза за времето</h1>
+<form action="/weather" method="get">
+    <input type="text" name="city" placeholder="Въведете име на град" required>
+    <button type="submit">Вземи прогнозата</button>
+</form>
+
+<div th:if="${weather != null}">
+    <h2>Времето в <span th:text="${weather.name}"></span></h2>
+    <p>Температура: <span th:text="${weather.main.temp}"></span>°C</p>
+    <p>Описание: <span th:text="${weather.weather[0].description}"></span></p>
+</div>
+
+<p th:if="${error != null}" th:text="${error}"></p>
+</body>
+</html>
