@@ -13,4 +13,5 @@ WeatherApp е Java Spring Boot приложение за извличане на
 1. Клонирайте репото:
    ```bash
    git clone https://github.com/miroslavpar/pu-weather-app.git
-   cd WeatherApp
+2. Стартирай приложението
+3. Примерен url : http://localhost:8081/weather?city=Plovdiv
